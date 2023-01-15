@@ -8,5 +8,7 @@ const csvReader = new CsvReader('football.csv');
 const matchReader = new MatchReader(csvReader);
 matchReader.load();
 
-const summary = new Summary(new WinsAnalyzer('Man United'), new ConsolePrinter());
-summary.analyzeAndPrintResult(matchReader.matches);
+// const summary = new Summary(new WinsAnalyzer('Man United'), new ConsolePrinter());
+// summary.analyzeAndPrintResult(matchReader.matches);
+
+Summary.winMatchesAndPrintOnConsole('Man United', matchReader.matches);

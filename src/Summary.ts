@@ -11,6 +11,11 @@ export interface Printer {
 }
 
 export class Summary {
+    static winMatchesAndPrintOnConsole(team: string, matchData: MatchData[]): void {
+        const summary = new Summary(new WinsAnalyzer('Man United'), new ConsolePrinter());
+        summary.analyzeAndPrintResult(matchData);
+    }
+
     constructor(private analyzer: Analyzer, private printer: Printer){}
 
     analyzeAndPrintResult(matchData: MatchData[]): void {
