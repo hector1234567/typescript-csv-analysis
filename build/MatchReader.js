@@ -1,13 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.MatchReader = exports.MatchResult = void 0;
+exports.MatchReader = void 0;
 const utils_1 = require("./utils");
-var MatchResult;
-(function (MatchResult) {
-    MatchResult["HomeWin"] = "H";
-    MatchResult["AwayWin"] = "A";
-    MatchResult["Draw"] = "D";
-})(MatchResult = exports.MatchResult || (exports.MatchResult = {}));
 class MatchReader {
     constructor(dataReader) {
         this.dataReader = dataReader;
